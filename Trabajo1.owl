@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#"
+     xml:base="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esAcompañadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esAcompañadoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Amigo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esCapitalDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esCapitalDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esCaracteristicaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esCaracteristicaDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#tieneCaracteristica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esLocacionDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esLocacionDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#estaUbicadoEn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#estaUbicadoEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#estaUbicadoEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#sitioARecomendar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#sitioARecomendar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#tieneCaracteristica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#tieneCaracteristica">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Amigo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Amigo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bares -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bares">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinemas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinemas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
