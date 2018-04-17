@@ -47,13 +47,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#esCaracteristicaDe">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#tieneCaracteristica"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
     </owl:ObjectProperty>
     
 
@@ -65,7 +60,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
     </owl:ObjectProperty>
     
 
@@ -74,7 +69,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#estaUbicadoEn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
     </owl:ObjectProperty>
@@ -92,12 +87,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#tieneCaracteristica">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura"/>
     </owl:ObjectProperty>
     
 
@@ -113,9 +103,193 @@
     
 
 
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#BacrimActivas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#BacrimActivas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire_PH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire_PH">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica_PH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica_PH">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cantidad_Habitantes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cantidad_Habitantes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cantidad_Rios -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cantidad_Rios">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cantidad_miradores -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cantidad_miradores">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cedula -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cedula">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad_Origen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad_Origen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento_Origen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento_Origen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Descripcion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Otro1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Direccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Direccion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinema_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Fecha_Nacimiento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Fecha_Nacimiento">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#MuertesPorAño -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#MuertesPorAño">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Precio_Entrada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Precio_Entrada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#RobosPorAño -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#RobosPorAño">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Telefono -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Telefono">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinema_representativo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo_representativo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Zona_Verde_m2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Zona_Verde_m2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -134,45 +308,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Amigo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bares -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bares">
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadAire">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CalidadHidrica">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial">
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinemas -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinema_representativo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinemas">
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Cinema_representativo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
     </owl:Class>
     
@@ -206,38 +365,40 @@
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo_representativo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo">
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Museo_representativo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Otro1 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Otro1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Entretenimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Parque_famoso"/>
     
 
 
     <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
-    
-
-
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Polucion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista"/>
     </owl:Class>
     
 
@@ -251,14 +412,6 @@
     <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Seguridad"/>
-    
-
-
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Temperatura">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
-    </owl:Class>
     
 
 
@@ -281,9 +434,661 @@
     
 
 
-    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre -->
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Nombre"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Calle 24 # 17-23</Direccion>
+        <Nombre>Bantu</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3003929</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cra 8 # 48-37</Direccion>
+        <Nombre>Sinko Bar</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2721872</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cra 19 #13 - 134</Direccion>
+        <Nombre>Laboratorio de Pinky BAR</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2232377</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Av 12 # 23-43</Direccion>
+        <Nombre>Rock bar</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2173442</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cl. 66 #1160</Direccion>
+        <Nombre>Route 66 Bar Cali</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2632929</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cl. 48 #35A-33</Direccion>
+        <Nombre>Vintrash Bar</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2388492</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cl. 21 #5A-38</Direccion>
+        <Nombre>PULL THE PLUG BAR Hard ROCK Neiva</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2884554</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cl. 47 #252</Direccion>
+        <Nombre>La Barra pub, Carbón &amp; Cerveza</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2996965</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cra. 10 #197</Direccion>
+        <Nombre>Mahalo Rock Café Bar</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2093933</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cra. 20 #19-78</Direccion>
+        <Nombre>Baraka Bar</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001332</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_Representativo9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Bar_representativo"/>
+        <Direccion>Cl. 8 #10-23</Direccion>
+        <Nombre>La Habana Café-bar</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2239039</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Buena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Buena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+        <CalidadAire_PH rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</CalidadAire_PH>
+        <CalidadHidrica_PH rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</CalidadHidrica_PH>
+        <Temperatura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</Temperatura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cra. 52a #65-86</Direccion>
+        <Nombre>Centro Comercial Aventura</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2781274</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cra. 1 #12-118</Direccion>
+        <Nombre>Plaza Bocagrande Centro Comercial</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2939333</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cl. 27 #201-25</Direccion>
+        <Nombre>Bulevar santa barbara</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2938835</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Avenida Carrera 30 #19</Direccion>
+        <Nombre>Calima Centro Comercial bogota</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2775768</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cra. 98 #16-200</Direccion>
+        <Nombre>Centro Comercial Jardín Plaza</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4545667</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cra. 33a #21-15</Direccion>
+        <Nombre>Megamall Centro Comercial</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2199821</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Calle 8 No.55-553</Direccion>
+        <Nombre>Metro Santa Lucia</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2909823</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cl. 50 #8a 53</Direccion>
+        <Nombre>Centro Popular Comercial CPC</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2903931</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cl. 1 #10-04</Direccion>
+        <Nombre>Centro Comercial La Casona de Zipaquirá</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2102003</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Cra. 13 #26a-216</Direccion>
+        <Nombre>Centro Comercial Viva La Ceja</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192819</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#CentroComercial_Representativo9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Centro_Comercial_representativo"/>
+        <Direccion>Calle 10 No. 12 - 184</Direccion>
+        <Nombre>Centro Comercial El Puente.</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2128298</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234234</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cantidad_miradores>
+        <Nombre>Medellín</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23434576</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cantidad_miradores>
+        <Nombre>Cartagena</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">543343</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Cantidad_miradores>
+        <Nombre>Arauca</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13546768979</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Cantidad_miradores>
+        <Nombre>Bogotá</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23536456</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cantidad_miradores>
+        <Nombre>Cali</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3243635</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cantidad_miradores>
+        <Nombre>Bucaramanga</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">172436621</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Cantidad_miradores>
+        <Nombre>Neiva</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234245</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Cantidad_miradores>
+        <Nombre>Barrancabermeja</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234572</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Cantidad_miradores>
+        <Nombre>Zipaquirá</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad8">
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70346</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Cantidad_miradores>
+        <Nombre>La Ceja</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Ciudad"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97663</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cantidad_miradores>
+        <Nombre>San Gil</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1928472987339845798</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</Cantidad_miradores>
+        <Nombre>Antioquia</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88346545663738949595</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</Cantidad_miradores>
+        <Nombre>Cundinamarca</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes>238472765t6788</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Cantidad_miradores>
+        <Nombre>Santander</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19376287575</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Cantidad_miradores>
+        <Nombre>Valle del Cauca</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23874287566</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Cantidad_miradores>
+        <Nombre>Huila</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65452112166</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Cantidad_miradores>
+        <Nombre>Arauca</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Departamento"/>
+        <Cantidad_Habitantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">235458656749911</Cantidad_Habitantes>
+        <Cantidad_Rios rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cantidad_Rios>
+        <Cantidad_miradores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</Cantidad_miradores>
+        <Nombre>Bolivar</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 34 # 22 - 15</Direccion>
+        <Nombre>El portal</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2345678</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 53 # 45 - 56</Direccion>
+        <Nombre>San Felipe</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9126363</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 27 # 35 - 57</Direccion>
+        <Nombre>San Francisco</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32457212</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 42 # 56 - 71</Direccion>
+        <Nombre>Granada Real</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4122567</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 64 # 12 - 5</Direccion>
+        <Nombre>Neiva Plaza</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1567245</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 10 # 15 - 54</Direccion>
+        <Nombre>Pipatón</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6220867</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 45 # 16 - 76</Direccion>
+        <Nombre>Coffee town</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7615535</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 15 # 12 - 4</Direccion>
+        <Nombre>Sietecueros</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2222245</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Hotel_famoso"/>
+        <Direccion>Calle 79 # 45 - 67</Direccion>
+        <Nombre>Ruitoque Campestre</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234346</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Mala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Mala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+        <Direccion>Calle 38 # 15 - 34</Direccion>
+        <Nombre>Colonial Plaza</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">524688</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Media -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Media">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Condicion_ambiental"/>
+        <CalidadAire_PH rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</CalidadAire_PH>
+        <CalidadHidrica_PH rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</CalidadHidrica_PH>
+        <Temperatura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Temperatura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#NickPersona1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#NickPersona1">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista1"/>
+        <Nombre>Nicko666</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <Cedula rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88237623412</Cedula>
+        <Ciudad_Origen>Cali</Ciudad_Origen>
+        <Departamento_Origen>Valle del Cauca</Departamento_Origen>
+        <Fecha_Nacimiento>2/6/92</Fecha_Nacimiento>
+        <Nombre>Natalia Duran</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista"/>
+        <Cedula rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88276234234</Cedula>
+        <Ciudad_Origen>Bucaramanga</Ciudad_Origen>
+        <Departamento_Origen>Santander</Departamento_Origen>
+        <Fecha_Nacimiento>17/9/90</Fecha_Nacimiento>
+        <Nombre>Raul Jimenez</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista"/>
+        <Cedula rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">918387123981</Cedula>
+        <Ciudad_Origen>Medellín</Ciudad_Origen>
+        <Departamento_Origen>Antioquia</Departamento_Origen>
+        <Fecha_Nacimiento>13/10/94</Fecha_Nacimiento>
+        <Nombre>Nicolas Gaviria</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Turista2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jose/ontologies/2018/3/untitled-ontology-23#Persona"/>
+        <Cedula rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82736487234</Cedula>
+        <Ciudad_Origen>Bogotá</Ciudad_Origen>
+        <Departamento_Origen>Cundinamarca</Departamento_Origen>
+        <Fecha_Nacimiento>16/4/93</Fecha_Nacimiento>
+        <Nombre>Rodolfo Aguirre</Nombre>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
